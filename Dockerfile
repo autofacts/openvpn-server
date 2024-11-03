@@ -28,7 +28,7 @@ ADD openssl-easyrsa.cnf /opt/app/easy-rsa/
 RUN chmod +x bin/*; chmod +x docker-entrypoint.sh
 
 # Expose the OpenVPN port (1194/udp)
-EXPOSE 1194/udp
+EXPOSE 1194/tcp
 
 # Set the entrypoint to the docker-entrypoint.sh script, passing in the following arguments:
 # $REQ_COUNTRY $REQ_PROVINCE $REQ_CITY $REQ_ORG $REQ_OU $REQ_CN
